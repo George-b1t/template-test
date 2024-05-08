@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-states"
+    bucket = "terraform-states-codepusher-2024"
     key    = "{CHANGE-terraform-path}/state/terraform.tfstate"
     region = "us-east-1"
   }
