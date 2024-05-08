@@ -11,7 +11,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "meu_bucket" {
-  bucket = "{CHANGE-bucket-name}"[e ]
+  bucket = "{CHANGE-bucket-name}"
   acl    = "private"
 
   tags = {
