@@ -2,8 +2,16 @@ provider "aws" {
   region = "us-east-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "terraform-states"
+    key    = "{CHANGE-terraform-path}/state/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
 resource "aws_s3_bucket" "meu_bucket" {
-  bucket = "meu-unico-nome-de-bucket-12345"
+  bucket = "{CHANGE-bucket-name}"[e ]
   acl    = "private"
 
   tags = {
