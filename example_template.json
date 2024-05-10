@@ -1,0 +1,41 @@
+{
+  "apiVersion": "scaffolder.backstage.io/v1beta3",
+  "kind": "Template",
+  "metadata": {
+    "name": "simple-bucket-template",
+    "title": "Simple Bucket Creation Template",
+    "description": "Scaffolder template for creating a simple S3 bucket",
+    "tags": [
+      "aws",
+      "s3",
+      "bucket"
+    ]
+  },
+  "spec": {
+    "owner": "codepusher-team",
+    "type": "service",
+    "parameters": [
+      {
+        "title": "Bucket Details",
+        "required": [
+          "bucket_name",
+          "terraform_path"
+        ],
+        "properties": {
+          "bucket_name": {
+            "title": "Bucket Name",
+            "type": "string",
+            "description": "The name of the S3 bucket to be created",
+            "ui:autofocus": true
+          },
+          "terraform_path": {
+            "title": "Terraform Path",
+            "type": "string",
+            "description": "Path to store the Terraform state file",
+            "ui:autofocus": true
+          }
+        }
+      }
+    ]
+  }
+}
