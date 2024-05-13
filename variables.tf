@@ -10,10 +10,10 @@ variable "terraform_state_bucket" {
 
 variable "terraform_state_key" {
   description = "O caminho no bucket S3 para o arquivo de estado do Terraform."
-  default     = "{CHANGE-terraform-path}/state/terraform.tfstate"
+  default     = ""
 }
 
 variable "bucket_name" {
   description = "O nome do bucket S3 a ser criado."
-  default     = "{CHANGE-bucket-name}"
+  default     = ""
 }
